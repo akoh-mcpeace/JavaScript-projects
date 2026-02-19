@@ -86,10 +86,11 @@
    const hours = now.getHours();
    const minutes = now.getMinutes();
 
-   const secondsDegrees = ((seconds/60) * 360) + 90;
+   // converting from time units to degrees (for the clock)
+   const secondsDegrees = ((seconds/60) * 360) + 90; 
    const MinutesDegrees = ((minutes/60) * 360) + 90;
    const HoursDegrees = ((hours/12) * 360) + 90;
-
+   // rotate on 
    secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
    MinutesHand.style.transform = `rotate(${MinutesDegrees}deg)`;
    HoursHand.style.transform = `rotate(${HoursDegrees}deg)`;
